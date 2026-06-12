@@ -1447,6 +1447,8 @@ def retire_question(question_id, user):
         QuestionQualityVote.query.filter_by(question_id=question.id).delete(synchronize_session=False)
         SpacedRepetition.query.filter_by(question_id=question.id).delete(synchronize_session=False)
         Attempt.query.filter_by(question_id=question.id).delete(synchronize_session=False)
+        ExamAnswer.query.filter_by(question_id=question.id).delete(synchronize_session=False)
+        ExamQuestion.query.filter_by(question_id=question.id).delete(synchronize_session=False)
         db.session.delete(question)
     db.session.commit()
     return question

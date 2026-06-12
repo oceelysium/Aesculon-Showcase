@@ -10,7 +10,7 @@ os.environ.setdefault("DATABASE_URL", "sqlite:///" + database_path)
 os.environ.setdefault("SECRET_KEY", "test-secret")
 
 from app import FEATURE_FLAG_DEFAULTS, app, db  # noqa: E402
-from models import Question  # noqa: E402
+from models import ExamAnswer, ExamQuestion, ExamSession, Question, User  # noqa: E402
 
 
 class AppSmokeTest(unittest.TestCase):
@@ -128,6 +128,47 @@ class AppSmokeTest(unittest.TestCase):
         self.assertEqual(summary["exam"]["status"], "completed")
         self.assertIn("correct_answer", summary["questions"][0])
         self.assertEqual(summary["exam"]["correct_count"], 1)
+
+    def test_retire_question_referenced_by_exam(self):
+        from app import retire_question
+        with app.app_context():
+            user = User.query.filter_by(username="ExamTester").first()
+            if not user:
+                user = User(username="ExamTester", email="exam@example.com")
+                user.set_password("password123")
+                db.session.add(user)
+                db.session.commit()
+            
+            q = Question.query.filter_by(question_id="Q001").first()
+            if not q:
+                q = Question(
+                    question_id="Q001",
+                    block="Population Health",
+                    topic="Exam Smoke",
+                    tier="Tier 1",
+                    stem="Stem 1",
+                    lead_in="Which option is correct?",
+                    correct_answer="A"
+                )
+                db.session.add(q)
+                db.session.commit()
+            
+            session = ExamSession(user_id=user.id, question_count=1, minutes=15)
+            db.session.add(session)
+            db.session.commit()
+            
+            eq = ExamQuestion(exam_session_id=session.id, question_id=q.id, position=0)
+            db.session.add(eq)
+            
+            ea = ExamAnswer(exam_session_id=session.id, question_id=q.id, chosen_answer="A", is_correct=True)
+            db.session.add(ea)
+            db.session.commit()
+            
+            retire_question("Q001", user)
+            
+            self.assertIsNone(Question.query.filter_by(question_id="Q001").first())
+            self.assertEqual(ExamQuestion.query.filter_by(question_id=q.id).count(), 0)
+            self.assertEqual(ExamAnswer.query.filter_by(question_id=q.id).count(), 0)
 
 
 if __name__ == "__main__":
