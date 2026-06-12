@@ -13,20 +13,27 @@
 
 ## 🌟 Visual Showcase
 
-| **Stoa (Home Dashboard) — Light Theme** | **Stoa (Home Dashboard) — Dark Theme** |
-|:---:|:---:|
-| ![Light Mode Dashboard](screenshots/stoa_dashboard_light.png) | ![Dark Mode Dashboard](screenshots/stoa_dashboard_dark.png) |
-| A classical ivory-textured workspace focusing on daily study targets, active streak counters, and peer leaderboards. | An obsidian-textured low-light theme optimised for late-night study sessions. |
+### 1. Stoa (Home Dashboard)
+![Stoa Dashboard](screenshots/stoa_dashboard.png)
+*A classical ivory-textured study dashboard highlighting user statistics, current cohort activity, active spaced repetition review counts, and multiplayer arena lobbies.*
 
-| **Agora (Practice Arena)** | **Progress Analytics & SVG Charts** |
-|:---:|:---:|
-| ![Practice Screen](screenshots/spaced_repetition_practice.png) | ![Progress Page Charts](screenshots/progress_charts.png) |
-| Calmed practice loop featuring active option hover states, detailed anatomical rationale, and reviews. | Custom SVG columns and radar webs that dynamically visualise study effort and accuracy across medical blocks. |
+---
 
-| **Multiplayer Duel Arena** | **Patch Notes / Updates Dialog** |
-|:---:|:---:|
-| ![Multiplayer Lobby](screenshots/multiplayer_arena.png) | ![Patch Notes Popover](screenshots/patch_notes_modal.png) |
-| Active multiplayer room creation, filtering by cohort, and real-time ready-up statuses. | Dynamic floating popover detailing the the latest release patch notes, managed directly from an admin panel. |
+### 2. Agora (Practice Arena)
+![Agora Practice Screen](screenshots/spaced_repetition_practice.png)
+*A focused, distraction-free practice environment displaying active Single Best Answer (SBA) questions, option choices, and live study session metrics.*
+
+---
+
+### 3. Progress & Analytics
+![Progress Page Charts](screenshots/progress_charts.png)
+*Visual progress tracker showing historical study effort (rolling XP columns) alongside overall accuracy, review counts, and question pool coverage.*
+
+---
+
+### 4. Multiplayer Duel Arena
+![Multiplayer Arena Lobby](screenshots/multiplayer_arena.png)
+*A shared matchmaking lobby for study cohorts, allowing custom question count configurations, time limits, and category filtering.*
 
 ---
 
