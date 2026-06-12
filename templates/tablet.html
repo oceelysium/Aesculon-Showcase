@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="stack">
+  <div>
+    <p class="page-kicker">The Tablet</p>
+    <h1 class="page-title">Progress</h1>
+    <p class="page-copy">Your accuracy, weak areas, streak, and study history.</p>
+  </div>
+
+  <div class="panel">
+    <img
+      class="progress-header"
+      src="{{ url_for('static', filename='assets/aesculon/progress-map.png') }}"
+      alt=""
+      aria-hidden="true"
+    >
+  </div>
+
+  <section class="metric-grid">
+    <article class="metric"><span>Attempted</span><strong data-stat-attempted>0</strong></article>
+    <article class="metric"><span>Accuracy</span><strong data-stat-accuracy>0%</strong></article>
+    <article class="metric"><span>Due review</span><strong data-stat-due>0</strong></article>
+    <article class="metric"><span>Completion</span><strong data-stat-completion>0%</strong></article>
+  </section>
+
+  <section class="panel panel--hero" data-xp-chart-panel>
+    <p class="section-label">Study effort (XP history)</p>
+    <div class="xp-chart-container" data-xp-chart>
+      <p class="muted">Loading XP history...</p>
+    </div>
+  </section>
+
+  <section class="archive-progress panel" data-question-progress>
+    <div class="archive-progress__header">
+      <div>
+        <p class="section-label">Question bank</p>
+        <h2 class="level-title">Archive coverage</h2>
+      </div>
+      <span class="mono" data-question-progress-percent>0%</span>
+    </div>
+    <div class="archive-progress__track" aria-hidden="true">
+      <span class="archive-progress__fill" data-question-progress-fill></span>
+    </div>
+    <p class="muted"><span data-question-progress-count>0 of 0 questions seen</span></p>
+  </section>
+
+  <section class="next-action panel" data-progress-recommendation>
+    <div>
+      <p class="section-label">Recommended study</p>
+      <h2 class="level-title" data-progress-action-title>Continue practice</h2>
+      <p class="page-copy" data-progress-action-copy>The Tablet is waiting for your next attempt.</p>
+    </div>
+    <a class="next-action__button" href="/practice" data-progress-action-link>Start</a>
+  </section>
+
+  <section class="panel panel--surface">
+    <p class="section-label">Review schedule</p>
+    <h2 class="level-title" data-next-review>No review scheduled</h2>
+    <p class="muted"><span data-stat-correct>0</span> correct answers · <span data-stat-time>0s</span> average time</p>
+  </section>
+
+  <section class="panel" data-block-stats-panel>
+    <p class="section-label">Accuracy by block</p>
+    <div class="block-stats-container">
+      <div class="radar-chart-wrap" data-radar-chart>
+        <p class="muted">Loading radar web...</p>
+      </div>
+      <div class="topic-list" data-block-stats>
+        <p class="muted">No attempts recorded yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="section-label">Weakest topics</p>
+    <div class="topic-list" data-weak-topics>
+      <p class="muted">No weak areas recorded yet.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="section-label">Due soon</p>
+    <div class="topic-list" data-due-soon>
+      <div class="empty-state-inline">
+        <span class="empty-asset empty-asset--review-clear" aria-hidden="true"></span>
+        <p class="muted">No reviews scheduled yet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="section-label">Recent mistakes</p>
+    <div class="topic-list" data-recent-mistakes>
+      <p class="muted">No mistakes recorded yet.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="section-label">Recent activity</p>
+    <div class="topic-list" data-recent-activity>
+      <p class="muted">No recent activity yet.</p>
+    </div>
+  </section>
+</section>
+{% endblock %}

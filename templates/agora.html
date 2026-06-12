@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="agora-shell" data-agora>
+  <aside class="filter-drawer" data-filter-drawer aria-label="Practice filters">
+    <div class="drawer-head">
+      <h2>Filters</h2>
+      <button class="drawer-close" type="button" data-filter-close>Close</button>
+    </div>
+    <div class="drawer-fields">
+      <div class="field">
+        <label for="filter-block">Block</label>
+        <select id="filter-block" data-filter="block">
+          <option value="">All blocks</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="filter-topic">Topic</label>
+        <select id="filter-topic" data-filter="topic">
+          <option value="">All topics</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="filter-mode">Mode</label>
+        <select id="filter-mode" data-filter="mode">
+          <option value="unanswered">New</option>
+          <option value="incorrect">Incorrect</option>
+          <option value="due">Due for review</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="filter-tier">Tier</label>
+        <select id="filter-tier" data-filter="tier">
+          <option value="">All tiers</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="filter-style">Style</label>
+        <select id="filter-style" data-filter="style">
+          <option value="">All styles</option>
+        </select>
+      </div>
+      <p class="drawer-count"><span data-filter-count>0</span><span data-filter-count-label> questions match</span></p>
+    </div>
+    <div class="drawer-actions">
+      <button class="drawer-action primary" type="button" data-filter-apply>Apply</button>
+      <button class="drawer-action" type="button" data-filter-clear>Clear</button>
+      <button class="drawer-action" type="button" data-filter-cancel>Cancel</button>
+    </div>
+  </aside>
+
+  <article class="practice-card" data-question-card>
+    <header class="practice-intro">
+      <p class="page-kicker">Enter the Agora</p>
+      <h1 class="page-title">Practice</h1>
+      <p class="page-copy" data-session-intent>New questions across the archive.</p>
+    </header>
+
+    <div class="mode-strip" aria-label="Practice mode">
+      <button class="mode-chip active" type="button" data-mode-choice="unanswered">New</button>
+      <button class="mode-chip" type="button" data-mode-choice="incorrect">Incorrect</button>
+      <button class="mode-chip" type="button" data-mode-choice="due" data-due-mode-label>Due Review</button>
+    </div>
+
+    <div class="agora-meta">
+      <div class="meta-left">
+        <span class="block-tag" data-block-tag>Agora</span>
+        <span class="q-counter" data-q-counter>Q 00</span>
+        <span class="q-counter" data-mode-label>New</span>
+      </div>
+      <button class="filter-btn" type="button" data-filter-open>Filters</button>
+    </div>
+
+    <div class="active-filters hidden" data-active-filters aria-label="Active filters"></div>
+
+    <div data-loading-state>
+      <div class="skeleton-stack">
+        <span class="skeleton-bar"></span>
+        <span class="skeleton-bar w-80"></span>
+        <span class="skeleton-bar w-60"></span>
+        <span class="skeleton-option"></span>
+        <span class="skeleton-option"></span>
+        <span class="skeleton-option"></span>
+        <span class="skeleton-option"></span>
+      </div>
+    </div>
+
+    <div class="hidden" data-question-state>
+      <div class="question-text">
+        <p data-stem></p>
+        <p class="lead-in" data-lead-in></p>
+      </div>
+      <div class="options" data-options></div>
+      <p class="answer-error hidden" data-answer-error></p>
+      <div class="empty-panel hidden" data-empty-state>
+        <span class="empty-asset empty-asset--no-results" data-empty-asset aria-hidden="true"></span>
+        <p class="section-label" data-empty-label>No questions</p>
+        <p class="page-copy" data-empty-copy>No questions match this session.</p>
+        <p class="muted" data-empty-detail></p>
+      </div>
+      <section class="explanation hidden" data-explanation>
+        <p class="explanation__label">Explanation</p>
+        <div class="explanation__body" data-explanation-body></div>
+        <div class="trap hidden" data-trap>
+          <p class="trap__label">Common trap</p>
+          <p class="trap__body" data-trap-body></p>
+        </div>
+        <div class="question-feedback hidden" data-question-feedback>
+          <p>Question quality</p>
+          <div class="review-actions">
+            <button class="review-btn" type="button" data-question-vote="good">Good</button>
+            <button class="review-btn" type="button" data-question-vote="bad">Bad</button>
+            <button class="review-btn" type="button" data-question-vote="not_learnt">Not learnt</button>
+          </div>
+          <p class="muted hidden" data-question-vote-result></p>
+        </div>
+        <div class="review-rating hidden" data-review-rating>
+          <p>How well did you remember this?</p>
+          <div class="review-actions">
+            <button class="review-btn" type="button" data-quality="1">Blank</button>
+            <button class="review-btn" type="button" data-quality="2">Struggled</button>
+            <button class="review-btn" type="button" data-quality="4">Recalled</button>
+            <button class="review-btn" type="button" data-quality="5">Trivial</button>
+          </div>
+          <p class="muted hidden" data-review-result></p>
+        </div>
+      </section>
+    </div>
+
+    <div class="hidden" data-auth-inline></div>
+
+    <div class="bottom-row">
+      <div class="streak-wrap">
+        <span class="streak-line" data-streak-line>◆ 0 day streak</span>
+        <span class="streak-line" data-session-line>0 answered · 0 correct</span>
+        <span class="xp-toast hidden" data-xp-toast></span>
+      </div>
+      <button class="next-btn" type="button" data-next-question disabled>Next question →</button>
+    </div>
+
+    <p class="muted review-schedule hidden" data-review-schedule></p>
+    <p class="level-banner hidden" data-level-banner></p>
+  </article>
+
+  <dialog class="disclaimer-dialog" data-question-disclaimer>
+    <form method="dialog" class="disclaimer-dialog__panel">
+      <p>Some questions may include content outside of what was covered in the lectures. Please mark these questions as "Not learnt".</p>
+      <button class="next-btn" type="submit" data-question-disclaimer-close>Understood</button>
+    </form>
+  </dialog>
+</section>
+{% endblock %}

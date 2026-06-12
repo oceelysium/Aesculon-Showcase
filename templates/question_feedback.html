@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="stack" data-question-feedback-admin>
+  <div>
+    <p class="page-kicker"><a href="/admin">← Workshop</a></p>
+    <h1 class="page-title">Question feedback</h1>
+    <p class="page-copy">Review questions marked bad or not learnt, reply with a lecture/source note when keeping them, or remove them from the live bank.</p>
+  </div>
+
+  <section class="panel">
+    <div class="next-action">
+      <div>
+        <p class="section-label">Triage queue</p>
+        <h2 class="panel-title"><span data-feedback-count>0</span> reported questions</h2>
+      </div>
+      <a class="ghost-btn" href="/admin">Admin summary</a>
+    </div>
+  </section>
+
+  <section class="feedback-list" data-feedback-list>
+    <article class="panel">
+      <p class="muted">Loading feedback...</p>
+    </article>
+  </section>
+</section>
+{% endblock %}

@@ -1,0 +1,212 @@
+[
+  {
+    "question_id": "Q001",
+    "block": "Musculoskeletal",
+    "topic": "Basic anatomy of the musculoskeletal system",
+    "lecture_no": "MSK L1",
+    "tier": "Tier 1",
+    "sba_style": "Quick-Fire",
+    "stem": "A joint is described as an interlocking suture line between adjacent bones of the skull.",
+    "lead_in": "Which joint category is being described?",
+    "options": {
+      "A": "Synarthrosis",
+      "B": "Amphiarthrosis",
+      "C": "Diarthrosis",
+      "D": "Saddle joint",
+      "E": "Hinge joint"
+    },
+    "correct_answer": "A",
+    "explanation": "A. Synarthrosis. Synarthroses are interlocking suture lines between adjacent skull bones.",
+    "top_distractor": "Amphiarthrosis",
+    "why_distractor_wrong": "Amphiarthroses have fibrocartilage between adjacent bones, such as in the rib cage, rather than an interlocking suture line."
+  },
+  {
+    "question_id": "Q002",
+    "block": "Musculoskeletal",
+    "topic": "Basic anatomy of the musculoskeletal system",
+    "lecture_no": "MSK L1",
+    "tier": "Tier 1",
+    "sba_style": "Quick-Fire",
+    "stem": "A fibrocartilaginous connection between adjacent bones in the rib cage is being classified.",
+    "lead_in": "Which joint category best fits this description?",
+    "options": {
+      "A": "Synarthrosis",
+      "B": "Amphiarthrosis",
+      "C": "Ball-and-socket joint",
+      "D": "Hinge joint",
+      "E": "Saddle joint"
+    },
+    "correct_answer": "B",
+    "explanation": "B. Amphiarthrosis. Amphiarthroses are fibrocartilaginous connections between adjacent bones; the rib cage is a representative example.",
+    "top_distractor": "Synarthrosis",
+    "why_distractor_wrong": "Synarthrosis is a skull suture-style interlocking joint, not a fibrocartilaginous rib-cage connection."
+  },
+  {
+    "question_id": "Q003",
+    "block": "Cardiovascular",
+    "topic": "Electrophysiology and cardiac cycle",
+    "lecture_no": "CVS L2",
+    "tier": "Tier 1",
+    "sba_style": "Quick-Fire",
+    "stem": "During a cardiac cycle, the mitral valve closes just before ventricular contraction causes a sharp rise in intraventricular pressure.",
+    "lead_in": "Which phase of the cardiac cycle begins immediately after the mitral valve closes?",
+    "options": {
+      "A": "Isovolumetric contraction",
+      "B": "Isovolumetric relaxation",
+      "C": "Rapid ejection",
+      "D": "Rapid ventricular filling",
+      "E": "Atrial systole"
+    },
+    "correct_answer": "A",
+    "explanation": "A. Isovolumetric contraction. Following mitral valve closure, the ventricles contract with both the AV and semilunar valves closed, raising pressure without volume change.",
+    "top_distractor": "Rapid ejection",
+    "why_distractor_wrong": "Rapid ejection begins only after the aortic valve opens, which follows the isovolumetric contraction phase."
+  },
+  {
+    "question_id": "Q004",
+    "block": "Cardiovascular",
+    "topic": "Vasculature and hemodynamics",
+    "lecture_no": "CVS L3",
+    "tier": "Tier 2",
+    "sba_style": "Short/Applied",
+    "stem": "An investigator notices that blood flow velocity decreases significantly as blood moves from the aorta into the capillaries.",
+    "lead_in": "What is the primary hemodynamic reason for this decrease in blood flow velocity?",
+    "options": {
+      "A": "The smaller diameter of individual capillaries",
+      "B": "The larger total cross-sectional area of the capillary bed",
+      "C": "Increased blood viscosity in the microcirculation",
+      "D": "Loss of pulsatile pressure from the heart",
+      "E": "Decreased pressure gradient across the capillaries"
+    },
+    "correct_answer": "B",
+    "explanation": "B. The larger total cross-sectional area of the capillary bed. According to the law of continuity, velocity is inversely proportional to total cross-sectional area; capillaries have a vast aggregate area.",
+    "top_distractor": "The smaller diameter of individual capillaries",
+    "why_distractor_wrong": "While individual capillaries are small, their aggregate cross-sectional area is massive, which governs overall flow velocity rather than individual vessel diameter."
+  },
+  {
+    "question_id": "Q005",
+    "block": "Respiratory",
+    "topic": "Pulmonary ventilation and mechanics",
+    "lecture_no": "RESP L1",
+    "tier": "Tier 1",
+    "sba_style": "Quick-Fire",
+    "stem": "A patient is evaluated for lung function. The clinician wants to calculate the amount of air remaining in the lungs after a normal, quiet expiration.",
+    "lead_in": "Which lung volume or capacity is being described?",
+    "options": {
+      "A": "Residual Volume (RV)",
+      "B": "Functional Residual Capacity (FRC)",
+      "C": "Expiratory Reserve Volume (ERV)",
+      "D": "Vital Capacity (VC)",
+      "E": "Total Lung Capacity (TLC)"
+    },
+    "correct_answer": "B",
+    "explanation": "B. Functional Residual Capacity (FRC). FRC is the volume of air remaining in the lungs after a normal passive expiration (FRC = ERV + RV).",
+    "top_distractor": "Residual Volume (RV)",
+    "why_distractor_wrong": "Residual Volume is the volume of air remaining in the lungs after a maximal forced expiration, not a normal quiet expiration."
+  },
+  {
+    "question_id": "Q006",
+    "block": "Respiratory",
+    "topic": "Gas exchange and transport",
+    "lecture_no": "RESP L2",
+    "tier": "Tier 2",
+    "sba_style": "Short/Applied",
+    "stem": "A researcher is studying the oxygen-hemoglobin dissociation curve. They observe a rightward shift of the curve in actively exercising skeletal muscle.",
+    "lead_in": "Which local factor is most directly responsible for this rightward shift?",
+    "options": {
+      "A": "Decreased temperature",
+      "B": "Decreased partial pressure of carbon dioxide (PCO2)",
+      "C": "Increased pH",
+      "D": "Increased concentration of 2,3-BPG",
+      "E": "Decreased concentration of hydrogen ions (H+)"
+    },
+    "correct_answer": "D",
+    "explanation": "D. Increased concentration of 2,3-BPG. A rightward shift (decreased affinity of hemoglobin for O2) is caused by increased temperature, increased PCO2, decreased pH (increased H+), and increased 2,3-BPG.",
+    "top_distractor": "Increased pH",
+    "why_distractor_wrong": "Increased pH (alkalosis) causes a leftward shift, not a rightward shift, because it increases hemoglobin's affinity for oxygen."
+  },
+  {
+    "question_id": "Q007",
+    "block": "Renal",
+    "topic": "Glomerular filtration and clearance",
+    "lecture_no": "RENAL L1",
+    "tier": "Tier 1",
+    "sba_style": "Quick-Fire",
+    "stem": "A substance is filtered at the glomerulus but is neither reabsorbed nor secreted by the renal tubules.",
+    "lead_in": "The renal clearance of this substance is equal to which physiological parameter?",
+    "options": {
+      "A": "Glomerular Filtration Rate (GFR)",
+      "B": "Renal Plasma Flow (RPF)",
+      "C": "Filtration Fraction",
+      "D": "Excretion Rate",
+      "E": "Free Water Clearance"
+    },
+    "correct_answer": "A",
+    "explanation": "A. Glomerular Filtration Rate (GFR). If a substance is freely filtered and neither reabsorbed nor secreted (e.g., inulin), its clearance rate equals the GFR.",
+    "top_distractor": "Renal Plasma Flow (RPF)",
+    "why_distractor_wrong": "Renal Plasma Flow is measured using a substance that is filtered and completely secreted (e.g., PAH), not one that is only filtered."
+  },
+  {
+    "question_id": "Q008",
+    "block": "Renal",
+    "topic": "Tubular reabsorption and secretion",
+    "lecture_no": "RENAL L2",
+    "tier": "Tier 2",
+    "sba_style": "Short/Applied",
+    "stem": "In the nephron, a specific transporter in the thick ascending limb of the loop of Henle is targeted by loop diuretics.",
+    "lead_in": "Which cotransporter is directly inhibited by these agents?",
+    "options": {
+      "A": "Na+/Cl- cotransporter",
+      "B": "Na+/K+/2Cl- cotransporter (NKCC2)",
+      "C": "Na+/H+ exchanger",
+      "D": "Na+/glucose cotransporter (SGLT2)",
+      "E": "NaCl/NaHCO3 symporter"
+    },
+    "correct_answer": "B",
+    "explanation": "B. Na+/K+/2Cl- cotransporter (NKCC2). Loop diuretics (e.g., furosemide) act by inhibiting the NKCC2 symporter in the thick ascending limb, disrupting the medullary concentration gradient.",
+    "top_distractor": "Na+/Cl- cotransporter",
+    "why_distractor_wrong": "The Na+/Cl- cotransporter is located in the distal convoluted tubule and is inhibited by thiazide diuretics, not loop diuretics."
+  },
+  {
+    "question_id": "Q009",
+    "block": "Gastrointestinal",
+    "topic": "GI motility and secretions",
+    "lecture_no": "GI L1",
+    "tier": "Tier 1",
+    "sba_style": "Quick-Fire",
+    "stem": "The secretion of hydrochloric acid (HCl) by parietal cells in the stomach is regulated by multiple chemical messengers.",
+    "lead_in": "Which hormone is a potent stimulator of gastric acid secretion?",
+    "options": {
+      "A": "Secretin",
+      "B": "Cholecystokinin (CCK)",
+      "C": "Gastrin",
+      "D": "Somatostatin",
+      "E": "Gastric Inhibitory Peptide (GIP)"
+    },
+    "correct_answer": "C",
+    "explanation": "C. Gastrin. Gastrin is secreted by G cells and acts directly and indirectly (via histamine release) to stimulate acid secretion from parietal cells.",
+    "top_distractor": "Secretin",
+    "why_distractor_wrong": "Secretin inhibits gastric acid secretion and stimulates pancreatic bicarbonate secretion in response to acid in the duodenum."
+  },
+  {
+    "question_id": "Q010",
+    "block": "Gastrointestinal",
+    "topic": "Digestion and absorption",
+    "lecture_no": "GI L2",
+    "tier": "Tier 2",
+    "sba_style": "Short/Applied",
+    "stem": "A patient with fat malabsorption is evaluated. The clinician suspects a deficiency in the emulsification of dietary lipids in the small intestine.",
+    "lead_in": "Which substance is essential for this emulsification process?",
+    "options": {
+      "A": "Pancreatic lipase",
+      "B": "Bile salts",
+      "C": "Pepsin",
+      "D": "Colipase",
+      "E": "Amylase"
+    },
+    "correct_answer": "B",
+    "explanation": "B. Bile salts. Bile salts are amphipathic molecules synthesized in the liver that emulsify large fat droplets into smaller micelles, increasing the surface area for lipase action.",
+    "top_distractor": "Pancreatic lipase",
+    "why_distractor_wrong": "Pancreatic lipase is the enzyme that chemically digests triglycerides, but it cannot act efficiently without prior mechanical emulsification by bile salts."
+  }
+]

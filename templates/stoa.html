@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="stack" data-dashboard>
+  <div>
+    <p class="page-kicker">The Stoa</p>
+    <h1 class="dashboard-title">Home</h1>
+    <p class="page-copy" data-greeting-copy>Welcome. Your quiet place before entering practice.</p>
+  </div>
+
+  <section class="panel panel--surface">
+    <p class="section-label">Current standing</p>
+    <h2 class="level-title level-title--ranked">
+      <img class="rank-badge" src="{{ url_for('static', filename='assets/aesculon/ranks/rank-1.png') }}" alt="" aria-hidden="true" data-rank-badge>
+      <span data-level-display>Neophyte · I</span>
+    </h2>
+    <p class="muted"><span data-xp-next>100 XP to next level</span></p>
+    <div class="level-track" aria-hidden="true">
+      <span class="level-track__fill" data-xp-fill></span>
+    </div>
+  </section>
+
+  <section class="next-action panel" data-next-action-card>
+    <div>
+      <p class="section-label" data-next-action-kicker>Best next move</p>
+      <h2 class="level-title" data-next-action-title>Begin practice</h2>
+      <p class="page-copy" data-next-action-copy>Enter the Agora and build the next layer of recall.</p>
+    </div>
+    <a class="next-action__button" href="/practice" data-next-action-link>Start</a>
+  </section>
+
+  <section class="cohort-pulse panel" data-cohort-pulse>
+    <div class="cohort-pulse__head">
+      <div>
+        <p class="section-label">Cohort Pulse</p>
+        <h2 class="level-title" data-cohort-pulse-title>The Stoa is listening</h2>
+        <p class="page-copy" data-cohort-pulse-copy>The archive is gathering today's signal.</p>
+      </div>
+    </div>
+    <div class="cohort-pulse__metrics">
+      <div>
+        <span data-cohort-active-label>Active today</span>
+        <strong data-cohort-active>0</strong>
+      </div>
+      <div>
+        <span data-cohort-answered-label>Questions today</span>
+        <strong data-cohort-answered>0</strong>
+      </div>
+      <div>
+        <span data-cohort-accuracy-label>Cohort accuracy</span>
+        <strong data-cohort-accuracy>0%</strong>
+      </div>
+    </div>
+    <div class="cohort-pulse__details">
+      <p><span>Hardest signal</span><strong data-cohort-hardest>Awaiting attempts</strong></p>
+      <p><span>Most practised</span><strong data-cohort-practiced>Awaiting attempts</strong></p>
+    </div>
+    <a class="cohort-pulse__link hidden" href="/practice" data-cohort-drill>Drill hardest topic</a>
+  </section>
+
+  {% if feature_enabled('duel') %}
+    <section class="action-grid action-grid--home" aria-label="Duel action">
+      <a class="action-card action-card--duel" href="/duel">
+        <span>The Arena: open rooms, shared questions, and live scoring.</span>
+        <strong>Duel classmates</strong>
+      </a>
+    </section>
+  {% endif %}
+
+  <section class="metric-grid">
+    <article class="metric"><span>Total XP</span><strong data-total-xp>0</strong></article>
+    <article class="metric"><span>Level</span><strong data-current-level>I</strong></article>
+    <article class="metric"><span>Day streak</span><strong data-day-streak>0</strong></article>
+    <article class="metric"><span>Due review</span><strong data-due-count>0</strong></article>
+  </section>
+
+  <section class="panel">
+    <p class="section-label">Study signal</p>
+    <div class="insight-grid">
+      <div>
+        <span class="muted">Answered</span>
+        <strong class="mono" data-questions-answered>0</strong>
+      </div>
+      <div>
+        <span class="muted">Next review</span>
+        <strong class="mono" data-next-due>None scheduled</strong>
+      </div>
+      <div>
+        <span class="muted">Weakest topic</span>
+        <strong data-weakest-topic>No attempts yet</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="archive-progress panel" data-question-progress>
+    <div class="archive-progress__header">
+      <div>
+        <p class="section-label">Question bank</p>
+        <h2 class="level-title">Archive coverage</h2>
+      </div>
+      <span class="mono" data-question-progress-percent>0%</span>
+    </div>
+    <div class="archive-progress__track" aria-hidden="true">
+      <span class="archive-progress__fill" data-question-progress-fill></span>
+    </div>
+    <p class="muted"><span data-question-progress-count>0 of 0 questions seen</span></p>
+  </section>
+
+  <section class="panel">
+    <p class="section-label">Pantheon preview</p>
+    <ol class="leader-list" data-leader-preview></ol>
+  </section>
+
+  <section class="auth-inline hidden" data-dashboard-auth>
+    <p>Enter the temple to load your dashboard, XP, streak, and review queue.</p>
+    <div class="auth-inline__actions">
+      <a class="ghost-btn" href="#" data-inline-auth="register">Register</a>
+      <a class="ghost-btn" href="#" data-inline-auth="login">Login</a>
+    </div>
+  </section>
+</section>
+{% endblock %}
