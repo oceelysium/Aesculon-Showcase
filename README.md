@@ -1,6 +1,6 @@
 # Æsculon — Medical SBA Revision & Spaced Repetition Platform
 
-Æsculon is a high-fidelity, distraction-free Single Best Answer (SBA) preparation platform designed for medical students. It acts as a comprehensive study workspace, integrating personalised memory retention algorithms, real-time cohort multiplayer arenas, and custom data visualisations.
+Æsculon is a high-fidelity, distraction-free Single Best Answer (SBA) preparation website designed to streamline study for medical students. Serving as a comprehensive, gamified revision workspace, the platform hosts an interactive question bank mapped across key clinical systems (such as cardiovascular, musculoskeletal, respiratory, renal, and gastrointestinal medicine) and provides customisable study filters, streak tracking, XP awards, and peer leaderboards. This project was developed in collaboration with AI code synthesis agents, leveraging **Codex** and **Antigravity** for backend architecture, routing, and client-side implementation, alongside **Claude** and **Gemini** for design conceptualisation, vector graphics, and image asset generation.
 
 ---
 
